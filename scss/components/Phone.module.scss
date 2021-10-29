@@ -1,113 +1,184 @@
-@use '../util' as *;
+@use "../util" as *;
 
-.phone{
-    background: var(--light-grayish-violet);
-    width: rem(247);
-    height: rem(505);
-    border: 10px solid var(--white);
-    border-radius: rem(24);
+.phone {
+  background: var(--light-grayish-violet);
+  width: rem(247);
+  height: rem(505);
+  border: 10px solid var(--white);
+  border-radius: rem(24);
 
+  &__header {
+    position: relative;
+    background: var(--blue-purple-grad);
+    height: rem(66);
+    width: 100%;
+    border-top-left-radius: rem(12);
+    border-top-right-radius: rem(12);
+    box-shadow: 0 5px 10px -10px #ccc;
+    padding-top: rem(29);
+    padding-left: rem(24);
+    padding-right: rem(24);
+    border-bottom-left-radius: rem(4);
+    border-bottom-right-radius: rem(4);
 
-    &__header{
-        position: relative;
-        background: var(--blue-purple-grad);
-        height: rem(66);
-        width: 100%;
-        border-top-left-radius: rem(12);
-        border-top-right-radius: rem(12);
-        box-shadow: 0 5px 10px -10px #ccc;
-        padding-top: rem(29);
-        padding-left: rem(24);
-        padding-right: rem(24);
-        border-bottom-left-radius: rem(4);
-        border-bottom-right-radius: rem(4);
+    &::before {
+      content: "";
+      border-bottom-left-radius: rem(11);
+      border-bottom-right-radius: rem(11);
+      position: absolute;
+      top: 0;
+      left: 21%;
+      width: rem(129);
+      height: rem(18);
+      background: white;
+    }
 
+    &-back {
+      position: relative;
+      margin-right: rem(7);
+      span {
+        display: block;
+        background: var(--white);
+        height: rem(2);
+        width: rem(6);
+        transform-origin: 0%;
 
-
-        &::before{
-            content: '';
-            border-bottom-left-radius: rem(11);
-            border-bottom-right-radius: rem(11);
-            position: absolute;
-            top: 0;
-            left: 21%;
-            width: rem(129);
-            height: rem(18);
-            background: white;
-
+        &:first-child {
+          transform: rotate(-45deg);
         }
 
-        &-back{
-            position: relative;
-            margin-right: rem(7);
-            span{
-                display: block;
-                background: var(--white);
-                height: rem(2);
-                width: rem(6);
-                transform-origin: 0%;
+        &:last-child {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: rotate(45deg);
+        }
+      }
+    }
 
-                &:first-child{
-                    transform: rotate(-45deg);
-                }
+    &-avatar {
+      position: relative;
+      overflow: hidden;
+      margin-right: rem(7);
+      height: rem(25);
+      width: rem(25);
+      border: 1px solid white;
+      border-radius: 50%;
+    }
+
+    &-text {
+      h2 {
+        margin-bottom: rem(5);
+        color: var(--white);
+        font-size: rem(10);
+        font-weight: 500;
+      }
+
+      h4 {
+        margin: 0;
+        color: var(--pale-violet);
+        font-size: rem(8);
+        font-weight: 400;
+      }
+    }
+
+    &-spacer {
+      display: block;
+      flex-grow: 1;
+    }
+
+    &-options {
+      span {
+        display: block;
+        width: rem(2);
+        height: rem(2);
+        background: var(--white);
+
+        &:not(:last-child) {
+          margin-bottom: rem(1);
+        }
+      }
+    }
+  }
+
+  &__text {
+    border-bottom-left-radius: rem(16);
+    border-bottom-right-radius: rem(16);
+    padding: rem(10) rem(8);
+
+    &-p {
+      margin: 0;
+      margin-bottom: rem(10);
+      display: inline-block;
+      padding: rem(8);
+      font-size: rem(7.5);
+      background-color: green;
+      border-radius: rem(7);
+
+      &-right {
+        background: white;
+        color: var(--dark-grayish-violet);
+        border-bottom-right-radius: rem(3);
+      }
+
+      &-left {
+        color: var(--moderate-violet);
+        background: var(--grayish-blue);
+        border-bottom-left-radius: rem(3);
+      }  
+    } 
+
+    &-walk {
+      margin: 0;
+      margin-bottom: rem(10);
+      border-radius: rem(7);
+      border-bottom-left-radius: rem(3);
+      padding: rem(8);
+      font-size: rem(7.5);
+      background-color: green;
+      width: rem(160);
+      height: rem(32);
+      background: var(--purple-blue-grad);
+
+      span {
+        display: block;
+
+        &:first-child{
+            color: var(--white);
+
+            span{
 
                 &:last-child{
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    transform: rotate(45deg);
+                    width: rem(12);
+                    height: rem(12);
+                    border-radius: 50%;
+                    border: 1px solid white;
                 }
             }
         }
 
-        &-avatar{
-            position: relative;
-            overflow: hidden;
-            margin-right: rem(7);
-            height: rem(25);
-            width: rem(25);
-            border: 1px solid white;
-            border-radius: 50%;
+        &:last-child{
+            color: white;
+            font-size: rem(11);
+            font-weight: 700;
         }
-
-        &-text{    
-            h2{
-                margin-bottom: rem(5);
-                color: var(--white);
-                font-size: rem(10);
-                font-weight: 500;
-            }
-            
-            h4{
-                margin: 0;
-                color: var(--pale-violet);
-                font-size: rem(8);
-                font-weight: 400;
-            }
-        }
-
-        &-spacer{
-            display: block;
-            flex-grow: 1;
-        }
-
-        &-options{
-            span{
-                display: block;
-                width: rem(2);
-                height: rem(2);
-                background: var(--white);
-
-                &:not(:last-child){
-                    margin-bottom: rem(1);
-                }
-            }
-        }
-
+      }
     }
 
-    &__text{
-        border-bottom-left-radius: rem(16);
-        border-bottom-right-radius: rem(16);
+
+    input[type=text]{
+        height: rem(34);
+        width: 100%;
+        border: none;
+        border-radius: rem(12);
+        background: white;
+        color: var(--grayish-blue);
+        font-size: rem(8);
+        &:focus{
+          outline: none;
+        }
+
+
     }
+  }
 }

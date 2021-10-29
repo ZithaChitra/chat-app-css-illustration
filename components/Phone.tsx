@@ -14,7 +14,7 @@ function Phone() {
                     <span id='span2'></span>
                 </div>
                 <div className={`${styles['phone__header-avatar']}`}>
-                    <Image src={avatar} alt='avatar' layout='fill'/>
+                    <Image src={avatar} alt='avatar' layout='fill' />
                 </div>
 
                 <div className={`${styles['phone__header-text']}`}>
@@ -23,7 +23,7 @@ function Phone() {
                 </div>
 
                 <div className={`${styles['phone__header-spacer']}`} />
-                
+
                 <div className={`${styles['phone__header-options']}`}>
                     <span></span>
                     <span></span>
@@ -32,37 +32,72 @@ function Phone() {
             </div>
 
             <div className={`${styles.phone__text}`}>
-                <p>
-                That sounds great. I’d be happy with that.
-                </p>
 
-                <p>
-                Could you send over some pictures of your dog, please?
-                </p>
+                <div className={`grid grid-left`}>
+                    <p className={`${styles['phone__text-p']} ${styles['phone__text-p-left']}`}>
+                        That sounds great. I’d be <br /> happy with that.
+                    </p>
 
-                <p>
-                Here are a few pictures. She’s a happy girl!
-                </p>
+                    <div className={`${styles['phone__text-spacer']}`} />
+                </div>
 
-                <p>
-                Can you make it?
-                </p>
 
-                <p>
-                She looks so happy! The time we discussed works. How long shall I take her out for?
-                </p>
+                <div className={`grid grid-left`}>
+                    <p className={`${styles['phone__text-p']} ${styles['phone__text-p-left']}`}>
+                        Could you send over some <br /> pictures of your dog, please?
+                    </p>
+                    <div className={`${styles['phone__text-spacer']}`} />
+                </div>
 
-                <p>
-                30 minute walk
-                $29
-                </p>
 
-                <p>
-                1 hour walk
-                $49
-                </p>
+                <div className={`grid grid-right`}>
+                    <div className={`${styles['phone__text-spacer']}`} />
+                    <p className={`${styles['phone__text-p']} ${styles['phone__text-p-right']}`}>
+                        Here are a few pictures. She’s <br /> a happy girl!
+                    </p>
+                </div>
 
-                <input type="text" placeholder='Type a message…'/>
+
+                <div className={`grid grid-right`}>
+                    <div className={`${styles['phone__text-spacer']}`} />
+                    <p className={`${styles['phone__text-p']} ${styles['phone__text-p-right']}`}>
+                        Can you make it?
+                    </p>
+                </div>
+
+
+                <div className={`grid grid-left`}>
+                    <p className={`${styles['phone__text-p']} ${styles['phone__text-p-left']}`}>
+                        She looks so happy! The time <br /> we discussed works. How <br /> long shall I take her out for?
+                    </p>
+                    <div className={`${styles['phone__text-spacer']}`} />
+                </div>
+
+
+                <div className={`grid grid-left`}>
+                    <div className={`${styles['phone__text-walk']} flex flex-ai-c flex-jc-sb`}>
+                        <span>
+                            <span className={`${styles.circle}`}></span>
+                            <span>30 minute walk</span>
+                        </span>
+                        <span>$29</span>
+                    </div>
+                    <div className={`${styles['phone__text-spacer']}`} />
+                </div>
+
+
+                <div className={`grid grid-left`}>
+                    <div className={`${styles['phone__text-walk']} flex flex-ai-c flex-jc-sb`}>
+                        <span className='flex flex-ai-c'>
+                            <span className={`${styles.circle}`}></span>
+                            <span>1 hour walk</span>
+                        </span>
+                        <span>$49</span>
+                    </div>
+                    <div className={`${styles['phone__text-spacer']}`} />
+                </div>
+
+                <input type="text" placeholder='Type a message…' />
             </div>
         </div>
     )

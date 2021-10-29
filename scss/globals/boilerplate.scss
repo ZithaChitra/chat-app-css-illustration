@@ -47,6 +47,22 @@ body {
   }
 }
 
+.grid{
+  display: grid;
+
+  &-left{
+    grid-template-columns: auto 1fr;
+  }
+
+  &-right{
+    grid-template-columns: 1fr auto;
+  }
+
+  &-lr{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 // visibility
 .hide-for-mobile {
   @include breakpoints-down(medium) {
