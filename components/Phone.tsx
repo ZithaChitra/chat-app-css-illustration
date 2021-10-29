@@ -1,29 +1,69 @@
 import React from 'react'
+import Image from 'next/image'
+
+import styles from '../styles/components/Phone.module.css'
+import avatar from '../public/images/avatar.jpg'
 
 function Phone() {
     return (
-        <div className={`phone`}>
+        <div className={`${styles.phone}`}>
+            <div className={`${styles.phone__header} flex flex-ai-c`}>
 
-            Samuel Green
-            Available to Walk
+                <div className={`${styles['phone__header-back']}`}>
+                    <span id='span1'></span>
+                    <span id='span2'></span>
+                </div>
+                <div className={`${styles['phone__header-avatar']}`}>
+                    <Image src={avatar} alt='avatar' layout='fill'/>
+                </div>
 
-            That sounds great. I’d be happy with that.
+                <div className={`${styles['phone__header-text']}`}>
+                    <h2>Samuel Green</h2>
+                    <h4>Available to Walk</h4>
+                </div>
 
-            Could you send over some pictures of your dog, please?
+                <div className={`${styles['phone__header-spacer']}`} />
+                
+                <div className={`${styles['phone__header-options']}`}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
 
-            Here are a few pictures. She’s a happy girl!
+            <div className={`${styles.phone__text}`}>
+                <p>
+                That sounds great. I’d be happy with that.
+                </p>
 
-            Can you make it?
+                <p>
+                Could you send over some pictures of your dog, please?
+                </p>
 
-            She looks so happy! The time we discussed works. How long shall I take her out for?
+                <p>
+                Here are a few pictures. She’s a happy girl!
+                </p>
 
-            30 minute walk
-            $29
+                <p>
+                Can you make it?
+                </p>
 
-            1 hour walk
-            $49
+                <p>
+                She looks so happy! The time we discussed works. How long shall I take her out for?
+                </p>
 
-            Type a message…
+                <p>
+                30 minute walk
+                $29
+                </p>
+
+                <p>
+                1 hour walk
+                $49
+                </p>
+
+                <input type="text" placeholder='Type a message…'/>
+            </div>
         </div>
     )
 }
