@@ -107,8 +107,6 @@
     padding: rem(10) rem(8);
 
     &-p {
-      margin: 0;
-      margin-bottom: rem(10);
       display: inline-block;
       padding: rem(8);
       font-size: rem(7.5);
@@ -125,60 +123,102 @@
         color: var(--moderate-violet);
         background: var(--grayish-blue);
         border-bottom-left-radius: rem(3);
-      }  
-    } 
+      }
+    }
+
+    &-image {
+      position: relative;
+      width: 100%;
+      height: rem(40);
+      border-radius: rem(8);
+      overflow: hidden;
+    }
 
     &-walk {
-      margin: 0;
-      margin-bottom: rem(10);
       border-radius: rem(7);
       border-bottom-left-radius: rem(3);
       padding: rem(8);
       font-size: rem(7.5);
-      background-color: green;
       width: rem(160);
       height: rem(32);
       background: var(--purple-blue-grad);
 
+      .circle {
+        display: inline-block;
+        width: rem(12);
+        height: rem(12);
+        border-radius: 50%;
+        border: 1px solid white;
+      }
+
+      .price {
+        color: white;
+        font-size: rem(11);
+        font-weight: 700;
+      }
+
       span {
-        display: block;
-
-        &:first-child{
-            color: var(--white);
-
-            span{
-
-                &:last-child{
-                    width: rem(12);
-                    height: rem(12);
-                    border-radius: 50%;
-                    border: 1px solid white;
-                }
-            }
-        }
-
-        &:last-child{
-            color: white;
-            font-size: rem(11);
-            font-weight: 700;
-        }
+      
+        &:first-child {
+          flex-grow: 1;
+          grid-gap: rem(8);
+          font-size: rem(7.5);
+          color: var(--white);
+        } 
       }
     }
 
+    &-message {
+      position: relative;
+      height: rem(35);
 
-    input[type=text]{
-        height: rem(34);
+      input[type="text"] {
+        height: 100%;
         width: 100%;
         border: none;
-        border-radius: rem(12);
+        border-radius: rem(17.5);
+        padding-left: rem(20);
         background: white;
         color: var(--grayish-blue);
         font-size: rem(8);
-        &:focus{
+        &:focus {
           outline: none;
         }
+      }
 
+      a {
+        position: absolute;
+        top: rem(6);
+        right: rem(5);
+        width: rem(24);
+        height: rem(24);
+        border-radius: 50%;
+        background: var(--very-dark-desaturated-violet);
+      }
 
+      &-arrow {
+        position: relative;
+        width: rem(6);
+
+        span {
+          display: block;
+          height: rem(2);
+          width: 100%;
+          transform-origin: 100%;
+          background: white;
+
+          &:first-child {
+            transform: rotate(45deg);
+          }
+
+          &:last-child {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(-45deg);
+          }
+        }
+      }
     }
   }
 }

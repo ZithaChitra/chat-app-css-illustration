@@ -38,6 +38,10 @@ body {
     justify-content: start;
   }
 
+  &-jc-e{
+    justify-content: end;
+  }
+
   &-ai-c {
     align-items: center;
   }
@@ -60,6 +64,11 @@ body {
 
   &-lr{
     grid-template-columns: 1fr 1fr;
+  }
+
+  &-rp{
+    grid-gap: rem(8);
+    grid-template-columns: 1fr repeat(3, rem(40));
   }
 }
 
@@ -100,5 +109,18 @@ body {
       padding-left: toRem(162);
       padding-right: toRem(162);
     }
+  }
+}
+
+// margin
+.m{
+  margin: 0;
+
+  &-s{
+    margin-bottom: rem(8);
+  }
+
+  &-l{
+    margin-bottom: rem(16);
   }
 }
