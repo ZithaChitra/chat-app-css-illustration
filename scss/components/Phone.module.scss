@@ -2,10 +2,19 @@
 
 .phone {
   background: var(--light-grayish-violet);
-  width: rem(247);
-  height: rem(505);
+  min-width: rem(247);
+  min-height: rem(505);
   border: 10px solid var(--white);
   border-radius: rem(24);
+  margin-bottom: rem(72);
+  box-shadow: rem(5) rem(5) rem(20) rem(6) var(--dark-grayish-violet);
+
+  @include breakpoints-up(large){
+    position: absolute;
+    top: - rem(250);
+    left: 0;
+    margin-bottom: 0;
+  }
 
   &__header {
     position: relative;

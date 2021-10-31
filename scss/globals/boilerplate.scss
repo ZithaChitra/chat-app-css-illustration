@@ -3,6 +3,8 @@
 html {
 	font-size: 100%;
 	box-sizing: border-box;
+  max-width: 100vw;
+  overflow: hidden;
 }
 
 *,
@@ -12,7 +14,7 @@ html {
 }
 
 body {
-	background: gray;
+	// background: gray;
 	margin: 0;
 	padding: 0;
 }
@@ -88,22 +90,22 @@ body {
 .pad {
   // small left - 8px
   &-l {
-    padding-left: toRem(31);
+    padding-left: toRem(37);
     @include breakpoints-up(large) {
       padding-left: toRem(164);
     }
   }
 
   &-r {
-    padding-right: toRem(31);
+    padding-right: toRem(37);
     @include breakpoints-up(large) {
       padding-right: toRem(164);
     }
   }
 
   &-lr {
-    padding-left: toRem(31);
-    padding-right: toRem(31);
+    padding-left: rem(37);
+    padding-right: rem(37);
 
     @include breakpoints-up(large) {
       padding-left: toRem(162);
@@ -122,5 +124,9 @@ body {
 
   &-l{
     margin-bottom: rem(16);
+  }
+
+  &-xl{
+    margin-bottom: rem(40);
   }
 }

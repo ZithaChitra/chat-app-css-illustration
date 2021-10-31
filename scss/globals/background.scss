@@ -1,0 +1,53 @@
+@use '../util' as *;
+
+body{
+    position: static;
+
+    &::before{
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: - rem(188);
+        width: rem(376);
+        height: rem(497);
+        border-bottom-left-radius: rem(188);
+        border-bottom-right-radius: rem(188);
+        z-index: -10;
+        background: linear-gradient(135deg, var(--light-magenta) 40%, var(--light-violet));
+
+        @include breakpoints-up(large){
+            width: rem(476);
+            height: 90vh;
+            left: - rem(80);
+            border-bottom-left-radius: rem(238);
+            border-bottom-right-radius: rem(238);
+        }
+    }
+
+
+    &::after{
+        display: none;
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        right: - rem(188);
+        width: rem(376);
+        height: rem(497);
+        border-top-left-radius: rem(188);
+        border-top-right-radius: rem(188);
+        z-index: -10;
+        background: linear-gradient(315deg,
+        var(--very-light-magenta) 0% 25%,
+        var(--very-dark-desaturated-violet) 25% 70%,
+        var(--light-grayish-violet) 70%), rgba(0, 0, 0, 0.7);
+        
+
+        @include breakpoints-up(large){
+            width: rem(476);
+            height: 90vh;
+            right: - rem(80);
+            border-top-left-radius: rem(238);
+            border-top-right-radius: rem(238);
+        }
+    }
+}
